@@ -61,3 +61,11 @@
 	color: darkgreen;
 	border:1px solid #b2d3a2;
 }
+
+.alert_danger{
+	background-color: #f7dfdb;
+	color:#be3f3c;
+	padding:1.5em;
+	border:1px solid pink;
+	border-radius:5px;
+}

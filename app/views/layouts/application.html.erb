@@ -12,6 +12,7 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' unless !logged_in?%>
     <% flash.each do |key, message| %>
       <div class="alert_<%=key%>"><%=message%></div>
     <% end %>
