@@ -1,2 +1,21 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<p class="header">my<b>reads</b></p>
+
+<% if @user.errors.any? %>
+	<div class="error_box">
+		<p class="error_header">The form contains <%=pluralize(@user.errors.count, 'error')%> :</p>
+		<ul>
+			<%@user.errors.count.times do |i|%>
+				<li><%=@user.errors.full_messages[i]%></li>
+			<%end%>
+		</ul>
+	</div>
+<%end%>
+
+<%=form_for (@user), html: {class: "signup_form"} do |f|%>
+	<%= f.text_field :username, placeholder: "Username", required: true, maxlength: 20%><br />
+	<%= f.text_field :email, placeholder: "Email", required: true, maxlength:255%><br />
+	<%=	f.password_field :password, placeholder: "Password", required: true, minlength: 8,maxlength:25%><br />
+	<%= f.password_field :password_confirmation, placeholder: "Password Confirmation", required: true, minlength: 8, maxlength:25%><br />
+	<%= f.submit "Sign Up"%>
+<%end%>
+
