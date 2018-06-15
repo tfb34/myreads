@@ -69,3 +69,6 @@
 	border:1px solid pink;
 	border-radius:5px;
 }
+input#remember_me{
+	width:50px;
+}
