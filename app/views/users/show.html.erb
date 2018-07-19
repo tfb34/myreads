@@ -1,6 +1,6 @@
 <% provide(:title, @user.username)%>
 <% if @user.avatar?%>
-	<%= image_tag(@user.avatar.small.url)%>
+	<span style="height:100px;width:100px;background:url(<%=@user.avatar.small.url%>);background-size:cover;background-position:contain;display:inline-block"></span>
 <%else%>
 	<span style="height:100px;width:100px;background-color:salmon;display:inline-block"></span>
 <%end%>
