@@ -72,3 +72,43 @@
 input#remember_me{
 	width:50px;
 }
+#user-avatar{
+	width:100px;height:100px;
+	border-radius:50px;
+	display:block;
+	margin:0 auto;
+	border:1px solid grey;
+}
+#user-name{
+	text-align: center;
+}
+#btn{
+	display:block;
+	margin:0 auto;
+	width:100px;
+	text-align: center;
+	text-decoration:none;
+}
+section.wrapper{
+	position:relative;min-height: 300px;
+}
+.collection-box{
+	width:100%;
+	height:180px;
+	position:absolute;
+	z-index:-1;
+}
+.currently-reading-box{
+	background-color: #2E294E;
+}
+.reading-challenge-box{
+	background-color: #F46036;
+}
+.bookshelves-box{
+	background-color: #1B998B;
+}
+section.wrapper h3{
+	text-align: center;
+	color:white;
+	padding-top:3em;
+}

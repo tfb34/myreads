@@ -1,8 +1,25 @@
 <% provide(:title, @user.username)%>
 <% if @user.avatar?%>
-	<span style="height:100px;width:100px;background:url(<%=@user.avatar.small.url%>);background-size:cover;background-position:contain;display:inline-block"></span>
+	<span id="user-avatar" style="background:url(<%=@user.avatar.small.url%>)"></span>
 <%else%>
-	<span style="height:100px;width:100px;background-color:salmon;display:inline-block"></span>
+	<span id="user-avatar" style="background-color:salmon;"></span>
 <%end%>
-<span><%=@user.username%>'s Profile</span>
-<%= link_to 'edit',edit_user_path%>
+<h2 id="user-name"><%=@user.username.capitalize%></h2>
+<%= link_to 'edit',edit_user_path, id: "btn"%>
+<section class="wrapper">
+	<div class="collection-box currently-reading-box">
+	</div>
+	<h3>Currently Reading</h3>
+</section>
+
+<section class="wrapper">
+	<div class="collection-box reading-challenge-box">
+	</div>
+	<h3>Reading Challenge</h3>
+</section>
+
+<section class="wrapper">
+	<div class="collection-box bookshelves-box">
+	</div>
+	<h3>Bookshelves</h3>
+</section>
