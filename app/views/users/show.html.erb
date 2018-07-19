@@ -1,2 +1,8 @@
 <% provide(:title, @user.username)%>
-<h2><%=@user.username%>'s Profile</h2>
+<% if @user.avatar?%>
+	<%= image_tag(@user.avatar.small.url)%>
+<%else%>
+	<span style="height:100px;width:100px;background-color:salmon;display:inline-block"></span>
+<%end%>
+<span><%=@user.username%>'s Profile</span>
+<%= link_to 'edit',edit_user_path%>

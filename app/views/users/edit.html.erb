@@ -1,0 +1,24 @@
+<p class="header">edit<b>Profile</b></p>
+
+<% if @user.errors.any? %>
+	<div class="error_box">
+		<p class="error_header">The form contains <%=pluralize(@user.errors.count, 'error')%> :</p>
+		<ul>
+			<%@user.errors.count.times do |i|%>
+				<li><%=@user.errors.full_messages[i]%></li>
+			<%end%>
+		</ul>
+	</div>
+<%end%>
+
+<%=form_for (@user), html: {class: "signup_form"} do |f|%>
+
+	<%= f.text_field :username, placeholder: "Username", required: true, maxlength: 20%><br />
+	<%= f.text_field :email, placeholder: "Email", required: true, maxlength:255%><br />
+	<%= image_tag(@user.avatar.small.url) if @user.avatar?%>
+	<%= f.file_field :avatar%>
+	<%= f.hidden_field :avatar_cache%>
+	<%=	f.password_field :password, placeholder: "Password", required: true, minlength: 8,maxlength:25%><br />
+	<%= f.password_field :password_confirmation, placeholder: "Password Confirmation", required: true, minlength: 8, maxlength:25%><br />
+	<%= f.submit "Save Changes"%>
+<%end%>

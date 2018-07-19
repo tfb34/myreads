@@ -5,6 +5,12 @@ ruby '2.3.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
+gem 'carrierwave-aws'
+gem 'carrierwave', '~> 1.0'
+# Image processing library, which allows manipulating image sizes
+gem 'mini_magick'
+gem 'aws-sdk-rails'
+gem 'figaro'
 #Hash function for securing passwords
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 # Use postgresql as the database for Active Record
