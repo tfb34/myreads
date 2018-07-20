@@ -15,8 +15,7 @@ module SessionsHelper
 				login(user)
 				@current_user = user
 			end
-		end
-			
+		end	
 	end
 
 	# Returns true if the user is logged in, false otherwise

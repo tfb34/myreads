@@ -1,4 +1,7 @@
-<h2>Hello World</h2>
-<p>
-	The time is now: <%= Time.now%>
-</p>
+<div id="welcome">
+<h2 class="header" style="margin:0;color:white;padding-top:100px">my<b>Reads</b></h2>
+<h4 style="margin:0;color:white;text-align: center">For the love of a good book.</h4>
+
+<%= link_to 'Sign up with email', signup_path%>
+<p>Already a member? <%= link_to 'Login', login_path%></p>
+</div>

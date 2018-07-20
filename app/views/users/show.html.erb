@@ -5,7 +5,11 @@
 	<span id="user-avatar" style="background-color:salmon;"></span>
 <%end%>
 <h2 id="user-name"><%=@user.username.capitalize%></h2>
-<%= link_to 'edit',edit_user_path, id: "btn"%>
+
+<% if logged_in? && @currentUser.id == @user.id%>
+	<%= link_to 'edit',edit_user_path, id: "btn"%>
+<%end%>
+
 <section class="wrapper">
 	<div class="collection-box currently-reading-box">
 	</div>

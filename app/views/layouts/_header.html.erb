@@ -1,3 +1,8 @@
-<div style="width:100%;height:50px;background-color:purple;color:white">
-	<%=link_to "logout", logout_path, method: :delete%>
+<div id="header" style="width:100%;height:50px;background-color:purple;color:white">
+	<h3>myReads</h3>
+	<%if logged_in?%>
+		<%=link_to "logout", logout_path, method: :delete%>
+	<%else%>
+		<%=link_to "Signup", signup_path%>
+	<%end%>
 </div>

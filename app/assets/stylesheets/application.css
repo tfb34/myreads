@@ -14,7 +14,9 @@
  *= require_self
  */
 
-
+body{
+	margin:0;
+}
 .signup_form input{
 	font-size: 18px;
 	padding: 0.5em;
@@ -111,4 +113,13 @@ section.wrapper h3{
 	text-align: center;
 	color:white;
 	padding-top:3em;
+}
+#welcome{
+	height:100vh;
+	background-color:#8E0C47;
+	color:white;
+	text-align: center;
+}
+#welcome a{
+	color:white;
 }
