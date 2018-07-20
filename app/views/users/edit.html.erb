@@ -1,15 +1,6 @@
 <p class="header">edit<b>Profile</b></p>
 
-<% if @user.errors.any? %>
-	<div class="error_box">
-		<p class="error_header">The form contains <%=pluralize(@user.errors.count, 'error')%> :</p>
-		<ul>
-			<%@user.errors.count.times do |i|%>
-				<li><%=@user.errors.full_messages[i]%></li>
-			<%end%>
-		</ul>
-	</div>
-<%end%>
+<%= render 'shared/error_messages'%>
 
 <%=form_for (@user), html: {class: "signup_form"} do |f|%>
 

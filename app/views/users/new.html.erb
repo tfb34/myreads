@@ -1,15 +1,6 @@
 <p class="header">my<b>reads</b></p>
 
-<% if @user.errors.any? %>
-	<div class="error_box">
-		<p class="error_header">The form contains <%=pluralize(@user.errors.count, 'error')%> :</p>
-		<ul>
-			<%@user.errors.count.times do |i|%>
-				<li><%=@user.errors.full_messages[i]%></li>
-			<%end%>
-		</ul>
-	</div>
-<%end%>
+<%= render 'shared/error_messages'%>
 
 <%=form_for (@user), html: {class: "signup_form"} do |f|%>
 	<%= f.text_field :username, placeholder: "Username", required: true, maxlength: 20%><br />
@@ -18,4 +9,5 @@
 	<%= f.password_field :password_confirmation, placeholder: "Password Confirmation", required: true, minlength: 8, maxlength:25%><br />
 	<%= f.submit "Sign Up"%>
 <%end%>
+<p style="text-align: center">Already a member? <%= link_to 'Login', login_path%></p>
 
