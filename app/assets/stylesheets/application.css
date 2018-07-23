@@ -71,6 +71,13 @@ body{
 	border:1px solid pink;
 	border-radius:5px;
 }
+.alert_info{
+	background-color:#d7eef7;
+	padding:1em;
+	font-size:20px;
+	color: #016f87;
+	border:1px solid #b6deee;
+}
 input#remember_me{
 	width:50px;
 }
